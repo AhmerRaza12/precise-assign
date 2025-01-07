@@ -21,38 +21,38 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <div className="hidden md:flex md:space-x-10 list-none">
+            <div className="hidden md:flex md:space-x-8 list-none">
                 <li>
-                    <a href="/" className=" text-lg px-3 py-2 bg-white   rounded-2xl shadow-lg text-black font-bold list-none hover:text-gray-600 duration-300"
+                    <a href="/" className=" text-lg px-3 py-2 bg-white   rounded-full shadow-lg text-black font-semibold list-none  duration-300"
                         target="">Home</a>
                 </li>
                 <li>
-                    <a href="/" className="font-bold text-black px-3 py-2 text-lg list-none hover:text-gray-500"
+                    <a href="/" className="font-semibold text-black px-3 py-2 text-lg list-none rounded-full   hover:bg-white hover:shadow-lg duration-300"
                         target="">CourseWork
                     </a>
                 </li>
                 <li>
-                    <a href="/" className="text-lg font-bold text-black list-none hover:text-gray-900"
+                    <a href="/" className="text-lg font-semibold text-black list-none hover:text-gray-900"
                         target="_blank">Dissertation
                     </a>
                 </li>
                 <li>
-                    <a href="/" className="text-lg font-bold text-black list-none hover:text-gray-900"
+                    <a href="/" className="text-lg font-semibold text-black list-none hover:text-gray-900"
                         target="_blank">Essay
                     </a>
                 </li>
                 <li>
-                    <a href="/" className="text-lg font-bold text-black list-none hover:text-gray-900"
+                    <a href="/" className="text-lg font-semibold text-black list-none hover:text-gray-900"
                         target="_blank">Thesis
                     </a>
                 </li>
             </div>
             <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
                 <div className="inline-flex rounded-full shadow">
-                    <div href="#"
-                        className="inline-flex items-center px-4 py-2 text-lg text-gray-900 bg-white border border-transparent rounded-full cursor-pointer font-base hover:bg-gray-50 ">
-                        Sign in
-                    </div>
+                    <button href="#"
+                        className="inline-flex items-center px-4 py-2 text-lg text-primary bg-black border border-transparent  cursor-pointer font-base hover:bg-gray-50 ">
+                        Contact Us
+                    </button>
                 </div>
             </div>
         </nav>
