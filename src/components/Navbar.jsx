@@ -7,7 +7,6 @@ const Navbar = () => {
         <nav className="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
             <div className="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
                 <div className="flex items-center justify-between w-full md:w-auto">
-                    {/* Logo */}
                     <a href="/"><span className="sr-only">Company Name</span>
                         <img className="w-auto h-8 sm:h-10" src="https://www.svgrepo.com/show/448244/pack.svg" loading="lazy" width="202" height="40" alt='Logo'/>
                     </a>
@@ -21,37 +20,41 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <div className="hidden md:flex md:space-x-8 list-none">
+            <div className="hidden md:flex md:space-x-1 list-none">
                 <li>
-                    <a href="/" className=" text-lg px-3 py-2 bg-white   rounded-full shadow-lg text-black font-semibold list-none  duration-300"
+                    <a href="/" className=" text-lg px-3 py-2  nav-link-active  rounded-full  text-black font-semibold list-none  "
                         target="">Home</a>
                 </li>
                 <li>
-                    <a href="/" className="font-semibold text-black px-3 py-2 text-lg list-none rounded-full   hover:bg-white hover:shadow-lg duration-300"
+                    <a href="/" className="font-semibold text-black px-3 py-2 text-lg list-none rounded-full nav-link-inactive"
                         target="">CourseWork
                     </a>
                 </li>
                 <li>
-                    <a href="/" className="text-lg font-semibold text-black list-none hover:text-gray-900"
+                    <a href="/" className="text-lg font-semibold text-black px-3 py-2 rounded-full list-none nav-link-inactive"
                         target="_blank">Dissertation
                     </a>
                 </li>
                 <li>
-                    <a href="/" className="text-lg font-semibold text-black list-none hover:text-gray-900"
+                    <a href="/" className="text-lg font-semibold text-black list-none rounded-full px-3 py-2 nav-link-inactive"
                         target="_blank">Essay
                     </a>
                 </li>
                 <li>
-                    <a href="/" className="text-lg font-semibold text-black list-none hover:text-gray-900"
+                    <a href="/" className="text-lg font-semibold text-black list-none rounded-full px-3 py-2 nav-link-inactive" 
                         target="_blank">Thesis
                     </a>
                 </li>
             </div>
             <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
                 <div className="inline-flex rounded-full shadow">
-                    <button href="#"
-                        className="inline-flex items-center px-4 py-2 text-lg text-primary bg-black border border-transparent  cursor-pointer font-base hover:bg-gray-50 ">
+                    <button 
+                        className="mr-2 inline-flex items-center px-4 py-2 text-sm text-primary bg-black border border-transparent  font-bold cursor-pointer font-base hover:bg-white hover:text-black duration-300  ease-in-out focus:ring-2 focus:ring-black focus:ring-offset-2">
                         Contact Us
+                    </button>
+                    <button 
+                        className="inline-flex items-center px-4 py-2 text-sm text-black bg-white border border-transparent  cursor-pointer font-bold hover:bg-gray-50 ">
+                        Order Now
                     </button>
                 </div>
             </div>

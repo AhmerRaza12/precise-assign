@@ -13,3 +13,53 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@layer components{
+  .nav-link-active{
+    @apply bg-white shadow-lg;
+  }
+  .nav-link-inactive{
+    @apply hover:bg-white hover:shadow-lg duration-300;
+  }
+}
+
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px; 
+  left: 20px; 
+  z-index: 1000; 
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-button img {
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.whatsapp-button img:hover {
+  transform: scale(1.1);
+}
+
+/* Adjusting Tawk.to Widget */
+.tawk-widget {
+  position: fixed;
+  bottom: 100px; /* Placed above WhatsApp button */
+  right: 20px;
+  z-index: 999; /* Behind WhatsApp button */
+  pointer-events: none; /* Prevent conflicts */
+}
+
+.live-chat-widget img {
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.live-chat-widget img:hover {
+  transform: scale(1.1);
+}
