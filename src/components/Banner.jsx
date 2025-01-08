@@ -5,7 +5,7 @@ import ContactImage from "../assets/contact-bg.jpg";
 const Banner = () => {
   return (
     <>
-      <section className="bg-primary text-white relative py-10 px-4">
+      <section className="bg-primary text-white relative py-10 px-8">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 mt-4">
             <h1 className="font-bold text-3xl text-black mb-2 md:text-4xl leading-[50px]">
@@ -69,8 +69,25 @@ const Banner = () => {
           </div>
         </div>
       </section>
+      <div className="relative">
+        <div className="bg-primary h-64 w-full overflow-hidden">
+          <svg
+            className="absolute top-0 right-0 left-0 h-64 w-full"
+            viewBox="10 0 1400 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+            <path
+              fill="#fff"
+              fillOpacity="1.0"
+              d="M0 49.5C0 49.5 71.5 0 214 0s214 49.5 214 49.5 214-49.5 428-49.5S1285 49.5 1428 49.5V174H0V49.5z"
+            ></path>
+            </svg>
+            </div>
+        
+      </div>
 
-      <section className="bg-primary py-6 px-4">
+      <section className="bg-white py-6 px-8">
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-8">
 
         <div className="md:w-1/2 mb-10 md:mb-0">
@@ -80,7 +97,7 @@ const Banner = () => {
             className="rounded-lg shadow-lg object-cover h-[400px] w-full"
           />
         </div>
-        <div className="md:w-2/5 bg-white bg-opacity-40 p-8 rounded-lg shadow-xl border-2 border-black">
+        <div className="md:w-2/5 bg-primary bg-opacity-60 p-8 rounded-lg shadow-xl border-2 border-black">
           <h2 className="text-black text-3xl  text-center leading-8  font-bold mb-1">
           Contact Now - No Upfront Payment
           </h2>
@@ -163,7 +180,7 @@ const Banner = () => {
     </section>
 
 
-      <div className="relative">
+      {/* <div className="relative">
         <div className="bg-primary h-64 w-full overflow-hidden">
           <svg
             className="absolute top-0 right-0 left-0 h-64 w-full"
@@ -179,7 +196,7 @@ const Banner = () => {
             </svg>
             </div>
         
-      </div>
+      </div> */}
     </>
   );
 };

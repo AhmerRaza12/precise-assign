@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Banner from './components/Banner';
 import Services from './components/Services';
+import GetInTouch from './components/GetInTouch';
+import SubjectsWeOffer from './components/SubjectsWeOffer';
+import Process from './components/Process';
 
 function App() {
   useEffect(() => {
@@ -19,6 +22,9 @@ function App() {
       <Navbar />
       <Banner />
       <Services/>
+      <GetInTouch />
+      <SubjectsWeOffer/>
+      <Process />
 
       {/* WhatsApp Button */}
       <a
