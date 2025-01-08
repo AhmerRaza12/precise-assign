@@ -53,7 +53,7 @@ const Navbar = () => {
                         Contact Us
                     </button>
                     <button 
-                        className="inline-flex items-center px-4 py-2 text-sm text-black bg-white border border-transparent  cursor-pointer font-bold hover:bg-gray-50 ">
+                        className="inline-flex items-center px-4 py-2 text-sm text-black bg-white border border-transparent  cursor-pointer font-bold hover:bg-black hover:text-primary duration-300 ease-in-out">
                         Order Now
                     </button>
                 </div>

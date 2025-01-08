@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Banner from './components/Banner';
+import Services from './components/Services';
 
 function App() {
   useEffect(() => {
@@ -17,6 +18,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Banner />
+      <Services/>
 
       {/* WhatsApp Button */}
       <a

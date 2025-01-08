@@ -63,3 +63,12 @@ code {
 .live-chat-widget img:hover {
   transform: scale(1.1);
 }
+
+.bullet-custom {
+  position: relative;
+}
+
+.bullet-custom li::marker {
+  color: #fcd51e; /* Theme Primary Color */
+  font-size: 1.5rem;
+}
