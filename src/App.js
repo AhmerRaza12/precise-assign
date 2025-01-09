@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
-import Banner from './components/Banner';
-import Services from './components/Services';
-import GetInTouch from './components/GetInTouch';
-import SubjectsWeOffer from './components/SubjectsWeOffer';
-import Process from './components/Process';
-
+import {Route,Routes, BrowserRouter as Router} from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import Contact from './pages/Contact';
+import Order from './pages/Order';
 function App() {
   useEffect(() => {
     // Tawk.to Script Integration
@@ -18,13 +16,16 @@ function App() {
   }, []);
 
   return (
+    <Router>
     <div className="App">
       <Navbar />
-      <Banner />
-      <Services/>
-      <GetInTouch />
-      <SubjectsWeOffer/>
-      <Process />
+      <Routes>
+        <Route path="/" element={<HomePage/>} />
+        <Route path='/contact' element={<Contact/>} />
+        <Route path='/order' element={<Order/>} />
+
+      </Routes>
+
 
       {/* WhatsApp Button */}
       <a
@@ -40,6 +41,7 @@ function App() {
         />
       </a>
     </div>
+    </Router>
   );
 }
 
