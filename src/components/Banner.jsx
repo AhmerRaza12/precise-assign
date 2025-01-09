@@ -86,7 +86,7 @@ const Banner = () => {
           </div>
         </div>
       </section>
-      <div className="relative">
+      {/* <div className="relative">
         <div className="bg-primary h-64 w-full overflow-hidden">
           <svg
             className="absolute top-0 right-0 left-0 h-64 w-full"
@@ -101,9 +101,24 @@ const Banner = () => {
             ></path>
           </svg>
         </div>
-      </div>
+      </div> */}
+      <div className="relative">
+  <div className="bg-primary h-4 w-full overflow-hidden">
+    <div
+      className="absolute top-full left-0 w-full h-[94px] z-[999999]"
+      style={{
+        maskImage: "url('https://owly.wpenginepowered.com/wp-content/themes/owly/images/slider-bottom-pattern.png')",
+        WebkitMaskImage: "url('https://owly.wpenginepowered.com/wp-content/themes/owly/images/slider-bottom-pattern.png')",
+        maskPosition: "left top",
+        WebkitMaskPosition: "left top",
+        transform: "rotate(180deg)",
+        backgroundColor: "#fcd51e",
+      }}
+    ></div>
+  </div>
+</div>
 
-      <section className="bg-white py-6 px-8 ">
+      <section className="bg-white py-6 mt-32 px-8 ">
         <div className="flex justify-center items-center">
           <h1 className="text-5xl text-center text-black font-bold bg-primary px-4 py-2 rounded-lg shadom-lg inline-block">
             Contact Us

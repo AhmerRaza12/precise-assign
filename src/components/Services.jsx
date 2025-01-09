@@ -20,9 +20,9 @@ const Services = () => {
 
      <div className="relative text-center mb-12">
         <div className="absolute inset-0 flex justify-center items-center -z-10">
-          <div className="w-full max-w-lg h-12 bg-gradient-to-r from-black via-gray-300 to-gray-500 transform rotate-1 blur-md rounded-lg"></div>
+          <div className="w-full max-w-lg h-12 bg-gradient-to-r from-yellow-300 via-primary to-yellow-600 transform rotate-1 blur-md rounded-lg"></div>
         </div>
-        <h1 className="text-primary font-bold text-4xl sm:text-5xl md:text-6xl">
+        <h1 className="text-black font-bold text-4xl sm:text-5xl md:text-6xl">
           Our Services
         </h1>
       </div>
