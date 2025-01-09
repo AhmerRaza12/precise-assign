@@ -72,3 +72,26 @@ code {
   color: #fcd51e; /* Theme Primary Color */
   font-size: 1.5rem;
 }
+.decoration-custom {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  float: none;
+  z-index: 1; 
+
+}
+
+.decoration-custom::after {
+  content: '';
+  position: absolute;
+  left: -40px; /* Position decoration left */
+  bottom: -8px; /* Adjust the bottom positioning for better alignment */
+  width: 46px;
+  height: 10px;
+  background-color: transparent;
+  -webkit-mask-image: url('https://owly.wpenginepowered.com/wp-content/plugins/designthemes-core-features/shortcodes/images/left-painting.png');
+  mask-image: url('https://owly.wpenginepowered.com/wp-content/plugins/designthemes-core-features/shortcodes/images/left-painting.png');
+  -webkit-mask-position: left top;
+  mask-position: left top;
+  z-index: -1; /* Keeps the decoration behind the text */
+}
