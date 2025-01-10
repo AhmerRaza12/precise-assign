@@ -20,39 +20,66 @@ const SliderCarousel = () => {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 1500,
+        speed: 300,
         slidesToShow: 6,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 0,
+        autoplaySpeed: 2000,
         cssEase: 'linear',
-        pauseOnHover: true,
+        pauseOnHover: false,
         arrows: false,
+        draggable: false,
+        
         responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                },
             },
-          },
         ],
-      };
-    const logos =[ArdenLogo, BedfordshireLogo, BoltonLogo, EdinburghLogo, GlasgowLogo, HuddersfieldLogo, ManchesterLogo, RGULogo, SheffieldLogo, StaffordshireLogo, UniversityOfDerbyLogo, UniversityOfSouthWalesLogo, UniversityOfSunderlandLogo];
+    };
+
+    const logos = [
+        ArdenLogo, BedfordshireLogo, BoltonLogo, EdinburghLogo,
+        GlasgowLogo, HuddersfieldLogo, ManchesterLogo, RGULogo,
+        SheffieldLogo, StaffordshireLogo, UniversityOfDerbyLogo,
+        UniversityOfSouthWalesLogo, UniversityOfSunderlandLogo
+    ];
 
     return (
-        <div className="text-center mt-20">
-        <div className="mb-8">
+        <div className="text-center mt-4">
+            <div
+                className="mt-5 mb-6 mx-auto"
+                style={{ maxWidth: '80%', overflowX: 'hidden' }}
+            >
+              <h1 className='text-center font-bold text-black text-4xl leading-8 mb-2 capitalize'>Trusted by 85,000 Customers</h1>
+              <p className='text-center text-gray-500 text-lg leading-7 mb-4'>Connecting With Over 4500 Trusted Legends</p>
+                <Slider {...settings}>
+                    {logos.map((logo, index) => (
+                        <div
+                            key={index}
+                            className="px-4 cursor-pointer"
+                        >
+                            <div
+                                className="mx-auto"
+                                style={{
+                                    width: '120px', 
+                                    height: '120px', 
+                                }}
+                            >
+                                <img
+                                    src={logo}
+                                    alt={`Partner ${index + 1}`}
+                                    className="w-full h-full object-contain"
+                                />
+                            </div>
+                        </div>
+                    ))}
+                </Slider>
+            </div>
         </div>
-        <div className="mt-20 mb-20" style={{ maxWidth: '100%', overflowX: 'hidden' }}>
-          <Slider {...settings}>
-            {logos.map((logo, index) => (
-              <div key={index} className="mx-1 cursor-pointer">
-                <img src={logo} alt={`Partner ${index + 1}`} className="mx-auto w-24 h-24" />
-              </div>
-            ))}
-          </Slider>
-        </div>
-      </div>
-    )
+    );
 };
+
 export default SliderCarousel;

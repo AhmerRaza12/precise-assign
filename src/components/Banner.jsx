@@ -1,5 +1,6 @@
 import React from "react";
 import BgImage from "../assets/new-bg.png";
+import SliderCarousel from "./SliderCarousel";
 // import ContactImage from "https://img.freepik.com/free-vector/call-center-design_24877-49643.jpg";
 
 const Banner = () => {
@@ -117,8 +118,11 @@ const Banner = () => {
     ></div>
   </div>
 </div>
+<section className="mt-32">
+  <SliderCarousel />
+</section>
 
-      <section className="bg-white py-6 mt-32 px-8 ">
+      <section className="bg-white py-6 mt-12 px-8 ">
         <div className="flex justify-center items-center">
           <h1 className="text-5xl text-center text-black font-bold bg-primary px-4 py-2 rounded-lg shadom-lg inline-block">
             Contact Us

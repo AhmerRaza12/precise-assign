@@ -4,12 +4,12 @@ import Services from '../components/Services'
 import GetInTouch from '../components/GetInTouch'
 import SubjectsWeOffer from '../components/SubjectsWeOffer'
 import Process from '../components/Process'
-import SliderCarousel from '../components/SliderCarousel'
+// import SliderCarousel from '../components/SliderCarousel'
 const HomePage = () => {
   return (
     <div>
         <Banner />
-        <SliderCarousel />
+        {/* <SliderCarousel /> */}
       <Services/>
       <GetInTouch />
       <SubjectsWeOffer/>
