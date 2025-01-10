@@ -100,10 +100,10 @@ const InnerPage = () => {
         </div>
       </section>
       <AboutSection />
-      {/* <Services />
+      <Services />
       <GetInTouch />
       <SubjectsWeOffer />
-      <Process  /> */}
+      <Process  />
 
       {/* <div className="wave-divider  dark:bg-gray-800">
   <svg
