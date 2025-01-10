@@ -83,7 +83,7 @@ const Contact = () => {
 
           
         </div>
-        <div className="md:w-2/5 bg-primary bg-opacity-60 p-8 rounded-lg shadow-xl border-2 border-black">
+        <div className="md:w-2/5 bg-white  p-8 rounded-lg shadow-xl border-2 border-dashed border-black">
           <h2 className="text-black text-3xl  text-center leading-8  font-bold mb-1">
           Get In Touch
           </h2>
@@ -95,7 +95,7 @@ const Contact = () => {
             <div>
               <label
                 htmlFor="name"
-                className="block text-gray-800 font-semibold mb-1"
+                className="block text-primary font-semibold mb-1"
               >
                 Name*
               </label>
@@ -112,7 +112,7 @@ const Contact = () => {
             <div>
               <label
                 htmlFor="phone"
-                className="block text-gray-800 font-semibold mb-2"
+                className="block text-primary font-semibold mb-2"
               >
                 Phone
               </label>
@@ -126,7 +126,7 @@ const Contact = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-gray-800 font-semibold mb-2"
+                className="block text-primary font-semibold mb-2"
               >
                 Email*
               </label>
@@ -141,7 +141,7 @@ const Contact = () => {
             <div>
               <label
                 htmlFor="requirements"
-                className="block text-gray-800 font-semibold mb-2"
+                className="block text-primary font-semibold mb-2"
               >
                 Additional Requirements
               </label>
@@ -156,7 +156,7 @@ const Contact = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-black text-primary font-bold py-3 px-6 rounded-lg hover:bg-secondary hover:text-black transform hover:scale-110 transition duration-300 ease-in-out"
+                className="bg-white text-black border-2  border-black font-bold py-3 px-6 rounded-lg hover:bg-primary hover:text-black  transition duration-500 ease-in-out"
               >
                 Submit
               </button>
