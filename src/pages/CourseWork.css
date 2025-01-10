@@ -1,0 +1,16 @@
+.main-title-section-wrapper::after {
+  background-image: url('https://owly.wpenginepowered.com/wp-content/themes/owly/images/slider-bottom-pattern.png');
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: cover;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 94px;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: auto;
+  width: 100%;
+  z-index: 99;
+}

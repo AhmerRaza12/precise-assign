@@ -4,6 +4,7 @@ import {Route,Routes, BrowserRouter as Router} from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import Contact from './pages/Contact';
 import Order from './pages/Order';
+import InnerPage from './pages/CourseWork';
 function App() {
   useEffect(() => {
     // Tawk.to Script Integration
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<HomePage/>} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='/order' element={<Order/>} />
+        <Route path='/courseWork' element={<InnerPage/>} />
 
       </Routes>
 
