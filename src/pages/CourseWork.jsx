@@ -22,7 +22,7 @@ const InnerPage = () => {
         <div className="container mx-10 px-6 flex flex-wrap items-center ">
           <div className="w-full md:w-1/2 md:mr-28">
             <p className="text-md sm:text-lg text-white font-medium leading-4 dark:text-white mb-2">
-              Don’t worry, the precise paper can assist you with proofreading
+              Don’t worry, the Precise Assignments can assist you with proofreading
               and editing your coursework.
             </p>
             <p className="text-md sm:text-lg text-white font-medium leading-4 dark:text-white">

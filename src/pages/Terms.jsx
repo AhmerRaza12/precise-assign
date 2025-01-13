@@ -110,7 +110,7 @@ const Terms = () => {
             <ul>
                 <li class='list-disc ml-8 mb-2'>
                     <p class="text-base">
-                    At ‘The Precise Paper’, no information or document of the client is ever shared with outside parties and is kept securely.
+                    At ‘The Precise Assignments’, no information or document of the client is ever shared with outside parties and is kept securely.
                     </p>
                 </li>
                 <li class='list-disc ml-8 mb-2'>
@@ -125,10 +125,10 @@ const Terms = () => {
                 </li>
             </ul>
             <div class='w-full flex'>
-          <h1 class="text-3xl font-bold mb-4 text-primary">The Precise Paper’s 100% Happiness Guarantee </h1>
+          <h1 class="text-3xl font-bold mb-4 text-primary">The Precise Assignments’s 100% Happiness Guarantee </h1>
         </div>
         <p class="mb-4 text-base">
-        Our goal at The Precise Paper is for you to be entirely satisfied with the service we offer. Although we appreciate praise for our efforts, we gained the most significant knowledge from your constructive criticism.
+        Our goal at The Precise Assignments is for you to be entirely satisfied with the service we offer. Although we appreciate praise for our efforts, we gained the most significant knowledge from your constructive criticism.
             </p>
             <h2 className='font-bold text-black text-xl mb-2'>Our Guiding Principle</h2>
             <p class="text-base mb-4" >

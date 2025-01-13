@@ -11,7 +11,7 @@ const Thesis = () => {
       <section className="bg-black bg-banner-pattern bg-cover bg-center dark:bg-blue-900 py-12 sm:py-20 relative main-title-section-wrapper">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl sm:text-5xl font-bold text-white text-center mb-4 sm:mb-6 dark:text-white">
-            Employ the Best Professionals at the Precise Paper
+            Employ the Best Professionals at the Precise Assignments
             <span className="text-primary tracking-wide border-b-2 py-1 border-primary ml-2 ">
               for Your Reports/Thesis
             </span>

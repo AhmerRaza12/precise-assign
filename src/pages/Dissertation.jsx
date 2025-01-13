@@ -33,7 +33,7 @@ const Dissertation = () => {
               Our knowledgeable team of professionals is ready to cover for you
               and provide an excellent research thesis on any topic in a timely
               manner. Given that, how crucial it is to fulfil deadlines, you are
-              in capable hands with the Precise Paper. We commit to delivering
+              in capable hands with the Precise Assignments. We commit to delivering
               the research thesis on time. No matter how much time remains, the
               research thesis will be of exceptional quality. We are
               appreciative of our interdisciplinary team of experts who dedicate
