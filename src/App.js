@@ -13,11 +13,10 @@ import Essay from './pages/Essay';
 import Thesis from './pages/Thesis';
 function App() {
   useEffect(() => {
-    // Tawk.to Script Integration
+    // Tawk.to Script 
     const tawkScript = document.createElement('script');
     tawkScript.async = true;
     tawkScript.src = 'https://embed.tawk.to/677cb36faf5bfec1dbe7a91c/1igvhprpg';
-    tawkScript.charset = 'UTF-8';
     tawkScript.setAttribute('crossorigin', '*');
     document.body.appendChild(tawkScript);
   }, []);

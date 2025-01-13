@@ -14,6 +14,7 @@ module.exports = {
         'banner-bottom-pattern':'url(https://owly.wpenginepowered.com/wp-content/themes/owly/images/slider-bottom-pattern.png)',
         'about-us-section':'url(https://owly.wpengine.com/wp-content/uploads/2019/02/about-page-bg.png)',
         'pentagon':'url(https://owly.wpenginepowered.com/wp-content/themes/owly/images/dotted-pentagon.png)',
+        'get-in-touch-bg':'url(https://owly.wpengine.com/wp-content/uploads/2019/01/book-with-shadow.png)',
       }
     },
   },

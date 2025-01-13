@@ -2,7 +2,7 @@ import React from 'react'
 
 const GetInTouch = () => {
     return (
-        <section className="bg-white overflow-visible py-10 mt-32 mb-4">
+        <section className="bg-white overflow-visible py-10 mt-10 mb-4">
             <div className="text-white items-center  flex flex-col">
                 <h2 className="font-bold text-center text-2xl lg:text-6xl text-primary ">Get In Touch With Us!</h2>
                 <p className=" mt-6 max-w-4xl text-lg md:text-xl leading-8 text-gray-500">

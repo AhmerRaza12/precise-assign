@@ -12,8 +12,8 @@ const HomePage = () => {
         <Banner />
         {/* <SliderCarousel /> */}
       <Services/>
-      <GetInTouch />
       <SubjectsWeOffer/>
+      <GetInTouch />
       <Process />
     
 
