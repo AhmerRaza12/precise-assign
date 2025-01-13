@@ -57,7 +57,8 @@ const Navbar = () => {
                         className="mr-2 inline-flex items-center px-4 py-2 text-sm text-primary bg-black border border-transparent  font-bold cursor-pointer font-base hover:bg-white hover:text-black duration-300  ease-in-out focus:ring-2 focus:ring-black focus:ring-offset-2">
                         Contact Us
                     </button>
-                    <button 
+                    <button
+                        onClick={() => window.location.href = '/order'}
                         className="inline-flex items-center px-4 py-2 text-sm text-black bg-white border border-transparent  cursor-pointer font-bold hover:bg-black hover:text-primary duration-300 ease-in-out">
                         Order Now
                     </button>
