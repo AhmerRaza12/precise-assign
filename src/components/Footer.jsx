@@ -1,5 +1,6 @@
 import React from "react";
 import LogoImg from "../assets/Logo.png";
+import {Link} from 'react-router-dom'
 const Footer = () => {
   return (
     <div className="mt-8 bg-primary pt-9">
@@ -7,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col justify-between sm:px-[18px] md:flex-row md:px-10">
           <div className="md:w-[350px]">
             {/* logo */}
-            <a href="/" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <img
                 alt="logo"
                 width="150"
@@ -17,7 +18,7 @@ const Footer = () => {
                 style={{ color: "transparent" }}
                 src={LogoImg}
               />
-            </a>
+            </Link>
             <p className="mt-2 text-md shadow-none font-normal text-black">
               What really makes us unique is that we acknowledge the amount of
               effort you put into your document and pledge to handle it with the
@@ -114,44 +115,44 @@ const Footer = () => {
               </p>
               <ul>
                 <li className="mt-[15px]">
-                  <a
+                  <Link
                     className="text-black transition duration-1000 ease-in-out text-[15px] font-normal hover:font-semibold"
-                    href="/"
+                    to="/"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="mt-[15px]">
-                  <a
+                  <Link
                     className="text-black transition duration-1000 ease-in-out text-[15px] font-normal hover:font-semibold"
-                    href="/our-tutors"
+                    to="/coursework"
                   >
                     Coursework
-                  </a>
+                  </Link>
                 </li>
                 <li className="mt-[15px]">
-                  <a
+                  <Link
                     className="text-black transition duration-1000 ease-in-out text-[15px] font-normal hover:font-semibold"
-                    href="/become-a-tutor"
+                    to="/dissertation"
                   >
                     Dissertation
-                  </a>
+                  </Link>
                 </li>
                 <li className="mt-[15px]">
-                  <a
+                  <Link
                     className="text-black transition duration-1000 ease-in-out text-[15px] font-normal hover:font-semibold"
-                    href="/plans-and-pricing"
+                    to="/essay"
                   >
                     Essay
-                  </a>
+                  </Link>
                 </li>
                 <li className="mt-[15px]">
-                  <a
+                  <Link
                     className="text-black transition duration-1000 ease-in-out text-[15px] font-normal hover:font-semibold"
-                    href="/terms-and-conditions"
+                    to="/thesis"
                   >
                     Thesis
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -176,19 +177,19 @@ const Footer = () => {
             © 2024 The Precise Paper. All rights reserved.
           </div>
           <div className="flex items-center">
-            <a
-              href="/terms-and-conditions"
+            <Link
+              to="/terms"
               className="text-black font-semibold text-[15px] "
             >
               Terms
-            </a>
+            </Link>
             <span className="text-black font-normal text-[20px] mx-2">|</span>
-            <a
-              href="/refund-policy"
+            <Link
+              to="/refund-policy"
               className="text-black font-semibold text-[15px] "
             >
                 Refund Policy
-                </a>
+                </Link>
             </div>
             </div>
       </div>

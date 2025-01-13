@@ -8,6 +8,9 @@ import InnerPage from './pages/CourseWork';
 import Terms from './pages/Terms';
 import Footer from './components/Footer';
 import RefundPolicy from './pages/RefundPolicy';
+import Dissertation from './pages/Dissertation';
+import Essay from './pages/Essay';
+import Thesis from './pages/Thesis';
 function App() {
   useEffect(() => {
     // Tawk.to Script Integration
@@ -29,6 +32,9 @@ function App() {
         <Route path='/contact' element={<Contact/>} />
         <Route path='/order' element={<Order/>} />
         <Route path='/courseWork' element={<InnerPage/>} />
+        <Route path='/dissertation' element={<Dissertation/>} /> 
+        <Route path='/essay' element={<Essay/>} />
+        <Route path='/thesis' element={<Thesis/>} />
         <Route path="/terms" element={<Terms/>} />
         <Route path="/refund-policy" element={<RefundPolicy/>} />
 

@@ -27,27 +27,27 @@ const Navbar = () => {
             <div className="hidden md:flex md:space-x-1 list-none">
                 <li>
                     <Link to="/" className=" text-lg px-3 py-2  nav-link-active  rounded-full  text-black font-semibold list-none  "
-                        target="">Home</Link>
+                        >Home</Link>
                 </li>
                 <li>
                     <Link to='/coursework' className="font-semibold text-black px-3 py-2 text-lg list-none rounded-full nav-link-inactive"
-                        target="">Coursework
+                        >Coursework
                     </Link>
                 </li>
                 <li>
-                    <a href="/" className="text-lg font-semibold text-black px-3 py-2 rounded-full list-none nav-link-inactive"
-                        target="_blank">Dissertation
-                    </a>
+                    <Link to='/dissertation' className="text-lg font-semibold text-black px-3 py-2 rounded-full list-none nav-link-inactive"
+                        >Dissertation
+                    </Link>
                 </li>
                 <li>
-                    <a href="/" className="text-lg font-semibold text-black list-none rounded-full px-3 py-2 nav-link-inactive"
-                        target="_blank">Essay
-                    </a>
+                    <Link to="/essay" className="text-lg font-semibold text-black list-none rounded-full px-3 py-2 nav-link-inactive"
+                        >Essay
+                    </Link>
                 </li>
                 <li>
-                    <a href="/" className="text-lg font-semibold text-black list-none rounded-full px-3 py-2 nav-link-inactive" 
-                        target="_blank">Thesis
-                    </a>
+                    <Link to="/thesis" className="text-lg font-semibold text-black list-none rounded-full px-3 py-2 nav-link-inactive" 
+                        >Thesis
+                    </Link>
                 </li>
             </div>
             <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
