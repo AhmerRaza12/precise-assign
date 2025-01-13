@@ -44,7 +44,7 @@ const Banner = () => {
                       viewBox="0 0 20 20"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                         clip-rule="evenodd"
                       ></path>
@@ -64,7 +64,7 @@ const Banner = () => {
                       viewBox="0 0 20 20"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                         clip-rule="evenodd"
                       ></path>
@@ -87,22 +87,7 @@ const Banner = () => {
           </div>
         </div>
       </section>
-      {/* <div className="relative">
-        <div className="bg-primary h-64 w-full overflow-hidden">
-          <svg
-            className="absolute top-0 right-0 left-0 h-64 w-full"
-            viewBox="10 0 1400 50"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill="#fff"
-              fillOpacity="1.0"
-              d="M0 49.5C0 49.5 71.5 0 214 0s214 49.5 214 49.5 214-49.5 428-49.5S1285 49.5 1428 49.5V174H0V49.5z"
-            ></path>
-          </svg>
-        </div>
-      </div> */}
+
       <div className="relative">
   <div className="bg-primary h-4 w-full overflow-hidden">
     <div
@@ -128,11 +113,9 @@ const Banner = () => {
             Contact Us
           </h1>
         </div>
-        {/* No upfront payment -upto 20% off text centered*/}
         <p className="text-center text-lg text-gray-black font-medium mt-2 tracking-wider uppercase leading-5 ">
           No upfront payment - upto 20% off
         </p>
-        {/* Form with fields wrapped in flexbox layout without any labels Name field , Email field, Phone field and additional requirements for Name Email and Phone they are adjacent width divided in 1/3 and then additional requirements is textarea with 5 rows */}
         <form className="flex flex-wrap justify-center items-center my-10 max-w-5xl mx-auto ">
           <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0 py-2">
             <input
@@ -165,7 +148,7 @@ const Banner = () => {
               placeholder="Additional Requirements"
             ></textarea>
           </div>
-{/* Submit Button */}
+
 <div className="w-full text-center">
       <button 
         className="bg-white hover:bg-primary text-black font-bold text-xl py-4 px-16 border-[3px] border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary shadow-lg duration-500" 
@@ -177,23 +160,6 @@ const Banner = () => {
         </form>
       </section>
 
-      {/* <div className="relative">
-        <div className="bg-primary h-64 w-full overflow-hidden">
-          <svg
-            className="absolute top-0 right-0 left-0 h-64 w-full"
-            viewBox="10 10 1400 50"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            >
-            <path
-              fill="#fff"
-              fillOpacity="1.0"
-              d="M0 49.5C0 49.5 71.5 0 214 0s214 49.5 214 49.5 214-49.5 428-49.5S1285 49.5 1428 49.5V174H0V49.5z"
-            ></path>
-            </svg>
-            </div>
-        
-      </div> */}
     </>
   );
 };

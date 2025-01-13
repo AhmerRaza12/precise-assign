@@ -3,7 +3,26 @@ import LogoImg from "../assets/Logo.png";
 import {Link} from 'react-router-dom'
 const Footer = () => {
   return (
-    <div className="mt-8 bg-primary pt-9">
+    <div>
+
+    <div className="relative">
+      <div className="bg-white w-full overflow-hidden">
+        <div
+          className="absolute top-full left-0 w-full h-[94px] z-[999999]"
+          style={{
+            maskImage:
+              "url('https://owly.wpenginepowered.com/wp-content/themes/owly/images/slider-bottom-pattern.png')",
+            WebkitMaskImage:
+              "url('https://owly.wpenginepowered.com/wp-content/themes/owly/images/slider-bottom-pattern.png')",
+            maskPosition: "left top",
+            WebkitMaskPosition: "left top",
+            transform: "rotate(180deg)",
+            backgroundColor: "#fff",
+          }}
+        ></div>
+      </div>
+    </div>
+    <div className="mt-12 bg-primary pt-9">
       <div className="mx-auto w-full max-w-[1166px] px-4 xl:px-0">
         <div className="flex flex-col justify-between sm:px-[18px] md:flex-row md:px-10">
           <div className="md:w-[350px]">
@@ -166,11 +185,6 @@ const Footer = () => {
             <span className="text-black font-bold">Disclaimer: </span> Thousands of writers, researchers, job seekers, and entrepreneurs have benefited from ‘The Precise Paper’ assistance in improving their work. Every paper is reviewed by our professional editors and proofreaders, and we are so sure of their skills that we provide a satisfaction guarantee of 100%. See for yourself by reading our clients’ evaluations or requesting a summary of work in case of Proposals or Dissertations editing.
           </p>
         </div>
-        {/* <div className="flex items-center justify-center pb-8 pt-[9px] md:py-8">
-          <p className="text-[10px] font-normal text-white md:text-[12px]">
-            © Copyright 2024 , All Rights Reserved by YOUR WEBSITES. PVT. LTD
-          </p>
-        </div> */}
         {/* Copyright Section on left and Terms | Privacy Policy on right */}
         <div className="flex justify-between items-center py-8">
           <div className="text-black font-bold text-[15px]">
@@ -193,6 +207,7 @@ const Footer = () => {
             </div>
             </div>
       </div>
+    </div>
     </div>
   );
 };

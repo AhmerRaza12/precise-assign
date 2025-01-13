@@ -5,6 +5,13 @@ import LogoImg from '../assets/Logo.png'
 const Navbar = () => {
     const location = useLocation();
     console.log(location.pathname);
+    const getActiveClass = (path) =>{
+        if(location.pathname === path){
+            return 'nav-link-active';
+        }else{
+            return 'nav-link-inactive';
+    }
+    }
   return (
     <div className="px-6 mx-auto  sm:px-6 bg-primary">
     <div className="relative pt-6 pb-6">
@@ -26,26 +33,32 @@ const Navbar = () => {
             </div>
             <div className="hidden md:flex md:space-x-1 list-none">
                 <li>
-                    <Link to="/" className=" text-lg px-3 py-2  nav-link-active  rounded-full  text-black font-semibold list-none  "
+                    
+                    <Link to="/"
+                    className={`text-lg font-semibold text-black px-3 py-2 list-none rounded-full ${getActiveClass('/')}`}
                         >Home</Link>
                 </li>
                 <li>
-                    <Link to='/coursework' className="font-semibold text-black px-3 py-2 text-lg list-none rounded-full nav-link-inactive"
+                    <Link to='/coursework' 
+                    className={`text-lg font-semibold text-black px-3 py-2 list-none rounded-full ${getActiveClass('/coursework')}`}
                         >Coursework
                     </Link>
                 </li>
                 <li>
-                    <Link to='/dissertation' className="text-lg font-semibold text-black px-3 py-2 rounded-full list-none nav-link-inactive"
+                    <Link to='/dissertation' 
+                    className={`text-lg font-semibold text-black px-3 py-2 list-none rounded-full ${getActiveClass('/dissertation')}`}
                         >Dissertation
                     </Link>
                 </li>
                 <li>
-                    <Link to="/essay" className="text-lg font-semibold text-black list-none rounded-full px-3 py-2 nav-link-inactive"
+                    <Link to="/essay"
+                    className={`text-lg font-semibold text-black px-3 py-2 list-none rounded-full ${getActiveClass('/essay')}`}
                         >Essay
                     </Link>
                 </li>
                 <li>
-                    <Link to="/thesis" className="text-lg font-semibold text-black list-none rounded-full px-3 py-2 nav-link-inactive" 
+                    <Link to="/thesis"
+                    className={`text-lg font-semibold text-black px-3 py-2 list-none rounded-full ${getActiveClass('/thesis')}`} 
                         >Thesis
                     </Link>
                 </li>
@@ -68,7 +81,6 @@ const Navbar = () => {
         </nav>
     </div>
 </div>
-  )
-}
-
-export default Navbar
+  );
+};
+export default Navbar;
