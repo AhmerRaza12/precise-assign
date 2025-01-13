@@ -23,14 +23,14 @@ const Services = () => {
       description:
         "Essays are the trickiest tasks to be done for academics, which might trigger students at times. We can help students follow the proper structure of essays while meeting the brief requirements.",
       image:
-        "https://img.freepik.com/free-photo/concentrated-young-woman-designer_171337-15791.jpg",
+        "https://img.freepik.com/premium-photo/close-up-university-students-writing-note-notebook-classroom-while-listening-studying-lecture-close-up-woman-s-hands-writing-notepad-placed-wooden-desktop_201468-593.jpg?w=760",
     },
     {
       title: "Thesis/Report",
       description:
         "You don’t need to worry about your longer project reports because we are providing our most prominent services at affordable rates so you can get the benefit of it and ace your grades in your semester.",
       image:
-        "https://img.freepik.com/free-photo/man-sitting-gaming-chair-looking-his-notes_23-2148288586.jpg",
+        "https://img.freepik.com/premium-photo/asian-woman-is-writing-work-into-paper-which-it-put-desk-office-room_477666-1730.jpg?w=900",
     },
   ];
 
@@ -79,9 +79,9 @@ const Services = () => {
                 onClick={() => setActiveTab(tab.title)}
                 className={`px-6 py-3 rounded-xl font-bold text-lg ${
                   activeTab === tab.title
-                    ? "bg-black text-primary"
-                    : "bg-gray-300 text-gray-700"
-                } hover:scale-105 hover:bg-black hover:text-primary transition-transform duration-300`}
+                    ? "bg-white text-primary"
+                    : "bg-gray-300 text-gray-black"
+                } hover:scale-105 hover:bg-white hover:text-primary transition-transform duration-300`}
               >
                 {tab.title}
               </button>

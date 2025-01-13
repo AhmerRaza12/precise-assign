@@ -78,7 +78,7 @@ const Banner = () => {
               </ul>
             </div>
           </div>
-          <div className="md:w-1/2 h-[500px]">
+          <div className="md:w-1/2">
             <img
               src={BgImage}
               alt="Hero"

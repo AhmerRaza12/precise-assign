@@ -91,10 +91,10 @@ const Footer = () => {
               </div>
               <div className="ml-[18px]">
                 <a
-                  href="mailto:help@theprecisepaper.co.uk"
+                  href="mailto:help@preciseassignments.co.uk"
                   className=" text-[14px] font-medium text-black"
                 >
-                  help@theprecisepaper.co.uk
+                  help@preciseassignments.co.uk
                 </a>
                 <p className=" text-[12px] font-medium text-black">
                   Support Email
@@ -182,18 +182,21 @@ const Footer = () => {
         {/* Disclaimer */}
         <div className="flex items-center justify-center mt-2">
           <p className="text-[15px] font-normal text-black">
-            <span className="text-black font-bold">Disclaimer: </span> Thousands of writers, researchers, job seekers, and entrepreneurs have benefited from ‘The Precise Paper’ assistance in improving their work. Every paper is reviewed by our professional editors and proofreaders, and we are so sure of their skills that we provide a satisfaction guarantee of 100%. See for yourself by reading our clients’ evaluations or requesting a summary of work in case of Proposals or Dissertations editing.
+            <span className="text-black font-bold">Disclaimer: </span> Thousands of writers, researchers, job seekers, and entrepreneurs have benefited from ‘The Precise Assignments’ assistance in improving their work. Every paper is reviewed by our professional editors and proofreaders, and we are so sure of their skills that we provide a satisfaction guarantee of 100%. See for yourself by reading our clients’ evaluations or requesting a summary of work in case of Proposals or Dissertations editing.
           </p>
         </div>
         {/* Copyright Section on left and Terms | Privacy Policy on right */}
         <div className="flex justify-between items-center py-8">
           <div className="text-black font-bold text-[15px]">
-            © 2024 The Precise Paper. All rights reserved.
+            © 2025 The Precise Assignments. All rights reserved.
           </div>
           <div className="flex items-center">
+            {/* open in new tab */}
             <Link
               to="/terms"
               className="text-black font-semibold text-[15px] "
+              target="_blank"
+              rel="noreferrer noopener"
             >
               Terms
             </Link>
@@ -201,6 +204,8 @@ const Footer = () => {
             <Link
               to="/refund-policy"
               className="text-black font-semibold text-[15px] "
+              target="_blank"
+              rel="noreferrer noopener"
             >
                 Refund Policy
                 </Link>
