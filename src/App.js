@@ -5,6 +5,9 @@ import HomePage from './pages/HomePage';
 import Contact from './pages/Contact';
 import Order from './pages/Order';
 import InnerPage from './pages/CourseWork';
+import Terms from './pages/Terms';
+import Footer from './components/Footer';
+import RefundPolicy from './pages/RefundPolicy';
 function App() {
   useEffect(() => {
     // Tawk.to Script Integration
@@ -21,12 +24,16 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
+       
         <Route path="/" element={<HomePage/>} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='/order' element={<Order/>} />
         <Route path='/courseWork' element={<InnerPage/>} />
+        <Route path="/terms" element={<Terms/>} />
+        <Route path="/refund-policy" element={<RefundPolicy/>} />
 
       </Routes>
+      <Footer/>
 
 
       {/* WhatsApp Button */}

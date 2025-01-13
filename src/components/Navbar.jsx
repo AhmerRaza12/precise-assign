@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
+import LogoImg from '../assets/Logo.png'
 const Navbar = () => {
     const location = useLocation();
     console.log(location.pathname);
@@ -8,10 +9,10 @@ const Navbar = () => {
     <div className="px-6 mx-auto  sm:px-6 bg-primary">
     <div className="relative pt-6 pb-6">
         <nav className="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
-            <div className="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
+            <div className="flex items-center flex-1 md:absolute md:inset-y-0 md:left-10">
                 <div className="flex items-center justify-between w-full md:w-auto">
                     <a href="/"><span className="sr-only">Company Name</span>
-                        <img className="w-auto h-8 sm:h-10" src="https://www.svgrepo.com/show/448244/pack.svg" loading="lazy" width="202" height="40" alt='Logo'/>
+                        <img className="w-auto h-12 sm:h-14" src={LogoImg} loading="lazy" width="200" height="40" alt='Logo'/>
                     </a>
                     <div className="flex items-center -mr-2 md:hidden">
                         <button className="inline-flex items-center justify-center p-2 text-gray-400 bg-gray-50 rounded-md hover:text-black hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-50"  type="button" aria-expanded="false">

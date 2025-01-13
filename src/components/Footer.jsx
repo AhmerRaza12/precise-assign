@@ -1,5 +1,5 @@
 import React from "react";
-
+import LogoImg from "../assets/Logo.png";
 const Footer = () => {
   return (
     <div className="mt-8 bg-primary pt-9">
@@ -10,12 +10,12 @@ const Footer = () => {
             <a href="/" className="flex items-center">
               <img
                 alt="logo"
-                width="100"
-                height="100"
+                width="150"
+                height="150"
                 decoding="async"
                 data-nimg="1"
                 style={{ color: "transparent" }}
-                src="https://theprecisepaper.co.uk/wp-content/uploads/2024/12/the-precise-paper-logo-idea-2-png-01-e1734695041536.webp"
+                src={LogoImg}
               />
             </a>
             <p className="mt-2 text-md shadow-none font-normal text-black">
@@ -184,10 +184,10 @@ const Footer = () => {
             </a>
             <span className="text-black font-normal text-[20px] mx-2">|</span>
             <a
-              href="/privacy-policy"
+              href="/refund-policy"
               className="text-black font-semibold text-[15px] "
             >
-                Privacy Policy
+                Refund Policy
                 </a>
             </div>
             </div>
