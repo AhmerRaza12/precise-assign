@@ -130,8 +130,8 @@ const InnerPage = () => {
       </section>
       <AboutSection />
       <Services />
-      <GetInTouch />
       <SubjectsWeOffer />
+      <GetInTouch />
       <Process  />
 
       {/* <div className="wave-divider  dark:bg-gray-800">

@@ -188,27 +188,27 @@ const Footer = () => {
         {/* Copyright Section on left and Terms | Privacy Policy on right */}
         <div className="flex justify-between items-center py-8">
           <div className="text-black font-bold text-[15px]">
-            © 2025 The Precise Assignments. All rights reserved.
+            © 2025 Precise Assignments. All rights reserved.
           </div>
           <div className="flex items-center">
-            {/* open in new tab */}
-            <Link
-              to="/terms"
-              className="text-black font-semibold text-[15px] "
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              Terms
-            </Link>
+          
+            <a
+  href="/terms"
+  className="text-black font-semibold text-[15px]"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Terms
+</a>
             <span className="text-black font-normal text-[20px] mx-2">|</span>
-            <Link
-              to="/refund-policy"
+            <a
+              href="/refund-policy"
               className="text-black font-semibold text-[15px] "
               target="_blank"
               rel="noreferrer noopener"
             >
                 Refund Policy
-                </Link>
+                </a>
             </div>
             </div>
       </div>

@@ -127,8 +127,8 @@ const Thesis = () => {
       </section>
       <AboutSection />
       <Services />
-      <GetInTouch />
       <SubjectsWeOffer />
+      <GetInTouch />
       <Process />
     </>
   );
