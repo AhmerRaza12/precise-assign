@@ -14,7 +14,7 @@ const Process = () => {
 
       <div className="mt-24">
         <ul className="md:grid md:grid-cols-3 md:col-gap-16 md:row-gap-16">
-          <li className="p-5 pb-10 text-center mt-28">
+          <li className="p-5 pb-10 text-center mt-28 max-sm:mt-0">
             <div className="flex flex-col items-center">
               <div className="relative top-0 -mt-16">
                 {/* Circle with dashed border */}
@@ -40,7 +40,7 @@ const Process = () => {
               </div>
             </div>
           </li>
-          <li className="  p-5 pb-10 text-center">
+          <li className="  p-5 pb-10 text-center max-sm:mt-10 max-md:mt-10">
             <div className="flex flex-col items-center">
               <div className="flex-shrink-0 relative top-0 -mt-16">
                 {/* Circle with dashed border */}
@@ -66,7 +66,7 @@ const Process = () => {
               </div>
             </div>
           </li>
-          <li className="  p-5 pb-10 text-center mt-28">
+          <li className="  p-5 pb-10 text-center mt-28 max-sm:mt-10 max-md:mt-10">
             <div className="flex flex-col items-center">
               <div className="flex-shrink-0 relative top-0 -mt-16">
                 {/* Circle with dashed border */}
