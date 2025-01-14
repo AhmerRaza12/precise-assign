@@ -1,9 +1,31 @@
 import React from "react";
 import BgImage from "../assets/new-bg.png";
 import SliderCarousel from "./SliderCarousel";
+import axios from "axios";
 // import ContactImage from "https://img.freepik.com/free-vector/call-center-design_24877-49643.jpg";
 
 const Banner = () => {
+  
+  const HandleSubmit = (e) => {
+    e.preventDefault();
+    const formdata = new FormData();
+    formdata.append("name", e.target.name.value);
+    formdata.append("email", e.target.email.value);
+    formdata.append("phone", e.target.phone.value);
+    formdata.append("requirements", e.target.requirements.value);
+    axios.post("http://localhost:3001/send-email", formdata)
+    .then((res) => {
+      console.log(res);
+      if(res.data.status === 200){
+        alert(res.data.message);
+      }
+      else{
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  };
   return (
     <>
       <section className="bg-primary text-white relative py-10 px-8">
@@ -116,35 +138,45 @@ const Banner = () => {
         <p className="text-center text-lg text-gray-black font-medium mt-2 tracking-wider uppercase leading-5 ">
           No upfront payment - upto 20% off
         </p>
-        <form className="flex flex-wrap justify-center items-center my-10 max-w-5xl mx-auto ">
+        <form
+        onSubmit={HandleSubmit} 
+        className="flex flex-wrap justify-center items-center my-10 max-w-5xl mx-auto ">
           <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0 py-2">
             <input
               className="appearance-none block w-full bg-white text-gray-700 border-2 border-dashed border-gray-300 rounded-md py-5 px-4 mb-3 leading-tight focus:outline-none focus:border-black"
-              id="grid-first-name"
+              id="name"
+              name="name"
               type="text"
+              required
               placeholder="Your Name*"
             />
           </div>
           <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0 py-2">
             <input
               className="appearance-none block w-full bg-white text-gray-700 border-2 border-dashed border-gray-300 rounded-md py-5 px-4 mb-3 leading-tight focus:outline-none focus:border-black"
-              id="grid-last-name"
+              id="email"
+              name="email"
               type="text"
-              placeholder="Your Email"
+              required
+              placeholder="Your Email*"
             />
           </div>
           <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0 py-2">
             <input
               className="appearance-none block w-full bg-white text-gray-700 border-2 border-dashed border-gray-300 rounded-md py-5 px-4 mb-3 leading-tight focus:outline-none focus:border-black"
-              id="grid-last-name"
+              id="phone"
+              name="phone"
               type="text"
-              placeholder="Your Phone"
+              required
+              placeholder="Your Phone*"
             />
           </div>
           <div className="w-full px-3 py-2">
             <textarea
               className="appearance-none block w-full bg-white text-gray-700 border-2 border-dashed border-gray-300 rounded-md py-5 px-4 mb-3 leading-tight focus:outline-none focus:border-black"
               rows="8"
+              id="requirements"
+              name="requirements"
               placeholder="Additional Requirements"
             ></textarea>
           </div>

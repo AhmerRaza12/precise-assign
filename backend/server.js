@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const cors = require('cors');
+const port = 3001;
 const nodemailer = require('nodemailer');
 const multer = require('multer');
 const Imap = require('imap');
@@ -8,6 +9,10 @@ const { simpleParser } = require('mailparser');
 const dotenv = require('dotenv');
 
 dotenv.config();
+app.use(cors({
+    methods: 'GET, POST',
+    credentials: true, 
+  }));
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true}));
 
@@ -28,14 +33,6 @@ const transporter = nodemailer.createTransport({
         pass: SENDER_PASSWORD
         }
     });
-// const mailoptions = {
-//     from: SENDER_EMAIL,
-//     to: 'rmuuu123@gmail.com',
-//     subject: 'Test Email',
-//     text: 'This is a test email'
-//     };
-
-
 const imap = new Imap({
     user: SENDER_EMAIL,
     password: SENDER_PASSWORD,
@@ -100,23 +97,17 @@ imap.once('ready', () => {
             }
         });
         }
-
         console.log(name, email, phone, requirements);
-   
-
     });
     
-
-
-
 app.get('/', (req, res) => {
     
-    res.json({ message: 'Hello World' });
+    res.json({ message: 'Precise Assignments-Backend Server' });
     }
 );
 
 app.listen(port, () => {
-    // not always listening on localhost
+
     console.log(`Server running `);
     }
 );

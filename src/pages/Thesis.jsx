@@ -5,7 +5,28 @@ import Services from "../components/Services";
 import GetInTouch from "../components/GetInTouch";
 import SubjectsWeOffer from "../components/SubjectsWeOffer";
 import Process from "../components/Process";
+import axios from "axios";
 const Thesis = () => {
+  const HandleSubmit = (e) => {
+    e.preventDefault();
+    const formdata = new FormData();
+    formdata.append("name", e.target.name.value);
+    formdata.append("email", e.target.email.value);
+    formdata.append("phone", e.target.phone.value);
+    formdata.append("requirements", e.target.requirements.value);
+    axios.post("http://localhost:3001/send-email", formdata)
+    .then((res) => {
+      console.log(res);
+      if(res.data.status === 200){
+        alert(res.data.message);
+      }
+      else{
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  };
   return (
     <>
       <section className="bg-black bg-banner-pattern bg-cover bg-center dark:bg-blue-900 py-12 sm:py-20 relative main-title-section-wrapper">
@@ -46,13 +67,16 @@ const Thesis = () => {
                 Up To 20% Off
               </p>
 
-              <form className="space-y-2">
+              <form 
+              onSubmit={HandleSubmit}
+              className="space-y-2">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <input
                       required
                       type="text"
                       id="name"
+                      name="name"
                       placeholder="Your Name *"
                       className="w-full bg-white text-black  placeholder:text-gray-500  border-2 border-dashed border-gray-500 p-3 rounded-lg focus:border-dashed  outline-none focus:outline-none focus:border-black"
                     />
@@ -61,6 +85,8 @@ const Thesis = () => {
                     <input
                       type="tel"
                       id="phone"
+                      name="phone"
+                      required
                       placeholder="Your Phone *"
                       className="w-full bg-white text-black  placeholder:text-gray-500  border-2 border-dashed border-gray-500 p-3 rounded-lg focus:border-dashed  outline-none focus:outline-none focus:border-black"
                     />
@@ -69,6 +95,7 @@ const Thesis = () => {
                     <input
                       type="email"
                       id="email"
+                      name="email"
                       required
                       placeholder="Your Email *"
                       className="w-full bg-white text-black  placeholder:text-gray-500  border-2 border-dashed border-gray-500 p-3 rounded-lg focus:border-dashed  outline-none focus:outline-none focus:border-black"
@@ -78,6 +105,7 @@ const Thesis = () => {
                     <textarea
                       rows={1}
                       id="requirements"
+                      name="requirements"
                       placeholder="Your Requirements"
                       type="text"
                       className="w-full bg-white text-black  placeholder:text-gray-500  border-2 border-dashed border-gray-500 p-3 rounded-lg focus:border-dashed  outline-none focus:outline-none focus:border-black"

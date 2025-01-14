@@ -5,9 +5,30 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { SlGlobe } from "react-icons/sl";
 import { HiMapPin } from "react-icons/hi2";
-
+import axios from "axios";
 
 const Contact = () => {
+  const HandleSubmit = (e) => {
+    e.preventDefault();
+    const formdata = new FormData();
+    formdata.append("name", e.target.name.value);
+    formdata.append("email", e.target.email.value);
+    formdata.append("phone", e.target.phone.value);
+    formdata.append("requirements", e.target.requirements.value);
+    axios.post("http://localhost:3001/send-email", formdata)
+    .then((res) => {
+      console.log(res);
+      if(res.data.status === 200){
+        alert(res.data.message);
+      }
+      else{
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  };
+
   return (
     <>
     <section className="bg-primary dark:bg-blue-900 py-12 sm:py-20">
@@ -91,7 +112,9 @@ const Contact = () => {
           <p className="text-center text-gray-900 font-semibold mb-6 leading-4">
           Up To 20% Off
           </p>
-          <form className="space-y-4">
+          <form 
+          onSubmit={HandleSubmit}
+          className="space-y-4">
             <div>
               <label
                 htmlFor="name"
@@ -103,6 +126,7 @@ const Contact = () => {
                 required
                 type="text"
                 id="name"
+                name='name'
                 placeholder="Enter your name"
                 className="w-full bg-black text-primary placeholder:text-yellow-100 p-3 rounded-lg  border-primary focus:outline-none focus:ring focus:ring-primary focus:border-primary"
               />
@@ -119,6 +143,8 @@ const Contact = () => {
               <input
                 type="tel"
                 id="phone"
+                required
+                name='phone'
                 placeholder="Enter your phone number"
                 className="w-full bg-black text-primary placeholder:text-yellow-100 p-3 rounded-lg  border-primary focus:outline-none focus:ring focus:ring-primary focus:border-primary"
               />
@@ -133,6 +159,7 @@ const Contact = () => {
               <input
                 type="email"
                 id="email"
+                name='email'
                 required
                 placeholder="Enter your email"
                 className="w-full bg-black text-primary placeholder:text-yellow-100 p-3 rounded-lg  border-primary focus:outline-none focus:ring focus:ring-primary focus:border-primary"
@@ -150,6 +177,7 @@ const Contact = () => {
                 id="requirements"
                 placeholder=" "
                type="text"
+               name='requirements'
                 className="w-full bg-black text-primary placeholder:text-yellow-100 p-3 rounded-lg  border-primary focus:outline-none focus:ring focus:ring-primary focus:border-primary"
               ></textarea>
             </div>
