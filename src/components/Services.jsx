@@ -44,7 +44,7 @@ const Services = () => {
           Our Services
         </h1>
       </div>
-      <p className="px-10 font-medium leading-6 text-xl text-left text-gray-700 mb-4">
+      <p className="px-10 font-medium leading-6 text-xl text-left text-black mb-4">
         ‘Precise Assignments’ can provide you with excellent editing services
         for your academic as well as creative writing projects. We can edit your
         creative writing in any form of English you like, including formal,
@@ -52,12 +52,12 @@ const Services = () => {
         deadline when working with us, and you’ll have professionally edited
         material that you can confidently submit for publication.
       </p>
-      <p className="px-10 font-medium leading-6 text-xl text-left text-gray-700 mb-4">
+      <p className="px-10 font-medium leading-6 text-xl text-left text-black mb-4">
         Our goal is to help you become the most excellent creative writer you
         can be by highlighting the best aspects of your distinct voice and
         writing style.
       </p>
-      <p className="px-10 font-medium leading-6 text-xl text-left text-gray-700 mb-4">
+      <p className="px-10 font-medium leading-6 text-xl text-left text-black mb-4">
         We provide a variety of services in addition to editing and
         proofreading. View all of our products or take a look at our customized
         packages for the following kinds of customers:
@@ -79,9 +79,9 @@ const Services = () => {
                 onClick={() => setActiveTab(tab.title)}
                 className={`px-6 py-3 rounded-xl font-bold text-lg ${
                   activeTab === tab.title
-                    ? "bg-white text-primary"
-                    : "bg-gray-300 text-gray-black"
-                } hover:scale-105 hover:bg-white hover:text-primary transition-transform duration-300`}
+                    ? "bg-black text-primary"
+                    : "bg-white text-black"
+                } hover:scale-105 hover:bg-black hover:text-primary transition-transform duration-300`}
               >
                 {tab.title}
               </button>

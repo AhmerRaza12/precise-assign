@@ -28,7 +28,7 @@ const Banner = () => {
   };
   return (
     <>
-      <section className="bg-primary text-white relative py-10 px-8">
+      <section className="bg-primary text-white relative ">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 mt-4">
             <h1 className="font-bold text-3xl text-black mb-2 md:text-4xl leading-[50px]">
@@ -92,7 +92,7 @@ const Banner = () => {
                       ></path>
                     </svg>
                   </div>
-                  <p className="ml-2 leading-6 text-gray-800 text-lg">
+                  <p className="ml-2 leading-6 text-gray-800 text-lg z-[999999]">
                     We can support your success in the academic world since we
                     value the choice of words!
                   </p>
@@ -108,12 +108,10 @@ const Banner = () => {
             />
           </div>
         </div>
-      </section>
-
-      <div className="relative">
-  <div className="bg-primary h-4 w-full overflow-hidden">
+        <div className="relative m-0">
+  <div className="bg-primary h-4 w-full overflow-hidden ">
     <div
-      className="absolute top-full left-0 w-full h-[94px] z-[999999]"
+      className="absolute top-[-90%] left-0 w-full h-[94px] z-[9999]"
       style={{
         maskImage: "url('https://owly.wpenginepowered.com/wp-content/themes/owly/images/slider-bottom-pattern.png')",
         WebkitMaskImage: "url('https://owly.wpenginepowered.com/wp-content/themes/owly/images/slider-bottom-pattern.png')",
@@ -125,6 +123,9 @@ const Banner = () => {
     ></div>
   </div>
 </div>
+      </section>
+
+      
 <section className="mt-32">
   <SliderCarousel />
 </section>
