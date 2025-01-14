@@ -32,7 +32,7 @@ const Navbar = () => {
                   alt="Logo"
                 />
               </a>
-              <div className="flex items-center -mr-2 md:hidden">
+              <div className="flex items-center -mr-2 md:hidden ">
                 <button
                   className="inline-flex items-center justify-center p-2 text-gray-400 bg-gray-50 rounded-md hover:text-black hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-50"
                   type="button"
@@ -58,7 +58,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className="hidden md:flex md:space-x-1 list-none">
+          <div className="hidden lg:flex md:space-x-1 list-none">
             <li>
               <Link
                 to="/"

@@ -29,15 +29,15 @@ const Banner = () => {
   return (
     <>
       <section className="bg-primary text-white relative ">
-        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center lg:p-6 sm:p-6 s">
           <div className="md:w-1/2 mb-10 md:mb-0 mt-4">
-            <h1 className="font-bold text-3xl text-black mb-2 md:text-4xl leading-[50px]">
+            <h1 className="font-bold text-3xl text-black mb-2 md:text-3xl lg:text-4xl leading-[50px] max-sm:text-center max-sm:text-2xl">
               We adore your words here at
-              <p className="text-secondary text-5xl mb-4">
+              <p className="text-secondary text-3xl md:text-4xl  mb-4 max-sm:text-center max-sm:text-3xl">
                 Precise Assignments
               </p>
             </h1>
-            <p className="text-xl mb-4 text-gray-800 pr-2">
+            <p className="text-xl mb-4 text-gray-800 pr-2 max-sm:text-center max-sm:text-sm">
               Whether it is{" "}
               <span className="text-white">
                 professional editing, proofreading, presentation{" "}
@@ -46,19 +46,20 @@ const Banner = () => {
               formal styling of these words. We also know how to help students
               and professionals use scholarly words more effectively.
             </p>
-            <button className="items-center justify-center mx-auto bg-black text-primary font-bold py-3 px-6 rounded hover:bg-white hover:text-black transform hover:scale-125 transition duration-300 ease-in-out">
-              Get Started
-            </button>
-            <div className="mt-10 lg:col-start-2 ">
-              <p className=" font-semibold leading-6 text-white uppercase">
+            <button className="bg-black text-primary font-bold py-3 px-6 rounded hover:bg-white hover:text-black transform hover:scale-125 transition duration-300 ease-in-out text-center text-sm 
+  max-sm:flex max-sm:mx-auto max-sm:justify-center max-sm:py-2 max-sm:px-4 max-sm:text-sm">
+  Get Started
+</button>
+            <div className="mt-10 lg:col-start-2  max-sm:mt-4">
+              <p className=" font-semibold leading-6 text-white uppercase max-sm:text-center max-sm:text-sm ">
                 Our skilled proofreaders have already helped
               </p>
-              <h4 className=" text-2xl font-extrabold leading-8 text-black sm:text-4xl sm:leading-9 uppercase mt-2">
+              <h4 className=" text-2xl font-extrabold leading-8 text-black sm:text-4xl sm:leading-9 uppercase mt-2 max-sm:text-center max-sm:text-xl max-sm:mt-1">
                 over 10,000 clients
               </h4>
 
-              <ul className="mt-8 space-y-2 font-semibold">
-                <li className="flex items-start lg:col-span-1">
+              <ul className="mt-8 space-y-2 font-semibold max-sm:mt-2 max-sm:p-4">
+                <li className="flex items-start lg:col-span-1 max-sm:flex-row max-sm:items-center max-sm:justify-center">
                   <div className="flex-shrink-0">
                     <svg
                       className="w-5 h-5 leading-6 text-black"
@@ -72,7 +73,7 @@ const Banner = () => {
                       ></path>
                     </svg>
                   </div>
-                  <p className="ml-2 leading-6 text-gray-800 text-lg">
+                  <p className="ml-2 leading-6 text-gray-800 text-lg  max-sm:text-sm">
                     We have turned our client's expectations into reality while
                     providing proficient documents as required, and we would be
                     honoured to gain your trust as well.
@@ -92,7 +93,7 @@ const Banner = () => {
                       ></path>
                     </svg>
                   </div>
-                  <p className="ml-2 leading-6 text-gray-800 text-lg z-[999999]">
+                  <p className="ml-2 leading-6 text-gray-800 text-lg z-[999999] max-sm:text-sm">
                     We can support your success in the academic world since we
                     value the choice of words!
                   </p>

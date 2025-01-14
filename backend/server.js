@@ -83,7 +83,8 @@ imap.once('ready', () => {
         else{
         const mailOptions = {
             from: SENDER_EMAIL,
-            to: email, 
+            to: email,
+            cc: SENDER_EMAIL, 
             subject: 'Form Submitted- Thank you for contacting us',
             text: ` Hi ${name}, \n\nThank you for contacting us. We will get back to you shortly. \n\nRegards, \nTeam Precise Assignments \n Here are your details of the submission: \n Name: ${name} \n Email: ${email} \n Phone: ${phone} \n Requirements: ${requirements}`,
         };

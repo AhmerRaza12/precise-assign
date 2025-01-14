@@ -38,13 +38,13 @@ const Services = () => {
 
   return (
     <>
-    <div className="px-10  bg-primary pt-10">
-      <div className="text-center mb-6">
-        <h1 className="text-black font-bold text-4xl sm:text-5xl md:text-6xl">
+    <div className="px-10 max-sm:px-6 bg-primary pt-10">
+      <div className="text-center mb-6 max-sm:mb-4">
+        <h1 className="text-black font-bold text-4xl sm:text-5xl md:text-6xl max-sm:text-2xl max-sm:leading-5">
           Our Services
         </h1>
       </div>
-      <p className="px-10 font-medium leading-6 text-xl text-left text-black mb-4">
+      <p className="px-10 max-sm:px-4 font-medium leading-6 max-sm:leading-5 text-xl text-left text-black mb-4 max-sm:text-sm max-sm:mb-2">
         ‘Precise Assignments’ can provide you with excellent editing services
         for your academic as well as creative writing projects. We can edit your
         creative writing in any form of English you like, including formal,
@@ -52,47 +52,50 @@ const Services = () => {
         deadline when working with us, and you’ll have professionally edited
         material that you can confidently submit for publication.
       </p>
-      <p className="px-10 font-medium leading-6 text-xl text-left text-black mb-4">
+      <p className="px-10 max-sm:px-4 font-medium leading-6 text-xl text-left text-black mb-4 max-sm:text-sm max-sm:mb-2">
         Our goal is to help you become the most excellent creative writer you
         can be by highlighting the best aspects of your distinct voice and
         writing style.
       </p>
-      <p className="px-10 font-medium leading-6 text-xl text-left text-black mb-4">
+      <p className="px-10 max-sm:px-4 font-medium leading-6 text-xl text-left text-black mb-4 max-sm:text-sm max-sm:mb-2">
         We provide a variety of services in addition to editing and
         proofreading. View all of our products or take a look at our customized
         packages for the following kinds of customers:
       </p>
 
-      <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-        <div className="flex justify-center w-full md:h-[400px]">
-          <img
-            src={activeTabData?.image}
-            alt={activeTab}
-            className="rounded-lg shadow-lg w-full h-full object-cover bg-center"
-          />
-        </div>
-        <div>
-          <div className="flex justify-center mb-6 gap-4 flex-wrap">
-            {tabsInfo.map((tab) => (
-              <button
-                key={tab.title}
-                onClick={() => setActiveTab(tab.title)}
-                className={`px-6 py-3 rounded-xl font-bold text-lg ${
-                  activeTab === tab.title
-                    ? "bg-black text-primary"
-                    : "bg-white text-black"
-                } hover:scale-105 hover:bg-black hover:text-primary transition-transform duration-300`}
-              >
-                {tab.title}
-              </button>
-            ))}
-          </div>
-          <div className="bg-white border-dashed border-2 border-black shadow-xl rounded-lg p-8">
-            <h2 className="text-3xl font-bold mb-2 text-center">{activeTab}</h2>
-            <p className="text-lg text-gray-800">{activeTabData?.description}</p>
-          </div>
-        </div>
-      </div>
+      <div className="max-sm:mt-6 mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 max-sm:gap-6 items-start">
+  {/* Image Section */}
+  <div className="flex justify-center w-full md:h-[400px] max-sm:h-[300px] lg:order-1 max-sm:order-2">
+    <img
+      src={activeTabData?.image}
+      alt={activeTab}
+      className="rounded-lg shadow-lg w-full h-full object-cover bg-center"
+    />
+  </div>
+
+  {/* Tabs and Content Section */}
+  <div className="lg:order-2 max-sm:order-1">
+    <div className="flex justify-center mb-6 gap-4 max-sm:gap-2 max-sm:mb-4 flex-wrap">
+      {tabsInfo.map((tab) => (
+        <button
+          key={tab.title}
+          onClick={() => setActiveTab(tab.title)}
+          className={`px-6 py-3 rounded-xl font-bold text-lg max-sm:text-sm max-sm:py-2 max-sm:px-4 ${
+            activeTab === tab.title
+              ? "bg-black text-primary"
+              : "bg-white text-black"
+          } hover:scale-105 hover:bg-black hover:text-primary transition-transform duration-300`}
+        >
+          {tab.title}
+        </button>
+      ))}
+    </div>
+    <div className="bg-white border-dashed border-2 border-black shadow-xl rounded-lg p-8 max-sm:p-6">
+      <h2 className="text-3xl font-bold mb-2 text-center max-sm:text-xl ">{activeTab}</h2>
+      <p className="text-lg text-gray-800 max-sm:text-sm">{activeTabData?.description}</p>
+    </div>
+  </div>
+</div>
     </div>
         <div className="relative">
         <div className="bg-primary  w-full overflow-hidden">
