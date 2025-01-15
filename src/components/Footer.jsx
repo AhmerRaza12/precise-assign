@@ -22,12 +22,12 @@ const Footer = () => {
         ></div>
       </div>
     </div>
-    <div className="mt-12 bg-primary pt-9">
+    <div className="mt-12 max-sm:mt-8 bg-primary pt-9">
       <div className="mx-auto w-full max-w-[1166px] px-4 xl:px-0">
         <div className="flex flex-col justify-between sm:px-[18px] md:flex-row md:px-10">
           <div className="md:w-[350px]">
             {/* logo */}
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center max-sm:justify-center">
               <img
                 alt="logo"
                 width="150"
@@ -38,7 +38,7 @@ const Footer = () => {
                 src={LogoImg}
               />
             </Link>
-            <p className="mt-2 text-md shadow-none font-normal text-black">
+            <p className="mt-2 text-md shadow-none font-normal text-black max-sm:text-center max-sm:text-sm">
               What really makes us unique is that we acknowledge the amount of
               effort you put into your document and pledge to handle it with the
               same level of care as if it were our own. If we didn’t provide
@@ -46,9 +46,9 @@ const Footer = () => {
               all around the UK.
             </p>
           </div>
-          <div className="md:w-[316px]">
-            <div className="mt-[23px] flex">
-              <div className="flex h-[38px] w-[38px] items-center justify-center rounded-[75%]">
+          <div className="md:w-[316px] max-sm:mx-auto">
+            <div className="mt-[23px] max-sm:mt-4 flex max-sm:justify-start">
+              <div className="flex h-[38px] w-[38px] items-center justify-center rounded-[75%] ">
                 <svg
                   width="24"
                   height="24"
@@ -127,7 +127,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="mt-6 flex w-full flex-col justify-center text-white sm:flex-row md:mt-0 md:max-w-[341px]">
+          <div className="mt-6 max-sm:mt-4 flex w-full flex-col justify-center max-sm:px-6 text-white sm:flex-row md:mt-0 md:max-w-[341px]">
             <div className="">
               <p className="text-black font-bold  text-[18px]  leading-6">
                 Quick Links
