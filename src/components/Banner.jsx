@@ -127,25 +127,25 @@ const Banner = () => {
       </section>
 
       
-<section className="mt-32">
+<section className="mt-32 max-sm:mt-20">
   <SliderCarousel />
 </section>
 
-      <section className="bg-white py-6 mt-12 px-8 ">
+      <section className="bg-white py-6 mt-12 px-8 max-sm:mt-6">
         <div className="flex justify-center items-center">
-          <h1 className="text-5xl text-center text-black font-bold bg-primary px-4 py-2 rounded-lg shadom-lg inline-block">
+          <h1 className="text-5xl text-center text-black font-bold bg-primary px-4 py-2 rounded-lg shadom-lg inline-block max-sm:text-3xl">
             Contact Us
           </h1>
         </div>
-        <p className="text-center text-lg text-gray-black font-medium mt-2 tracking-wider uppercase leading-5 ">
+        <p className="text-center text-lg text-gray-black font-medium mt-2 tracking-wider uppercase leading-5 max-sm:text-sm ">
           No upfront payment - upto 20% off
         </p>
         <form
         onSubmit={HandleSubmit} 
-        className="flex flex-wrap justify-center items-center my-10 max-w-5xl mx-auto ">
-          <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0 py-2">
+        className="flex flex-wrap justify-center items-center my-10 max-w-5xl mx-auto max-sm:my-6">
+          <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0 py-2 max-sm:mb-3 max-sm:py-1">
             <input
-              className="appearance-none block w-full bg-white text-gray-700 border-2 border-dashed border-gray-300 rounded-md py-5 px-4 mb-3 leading-tight focus:outline-none focus:border-black"
+              className="appearance-none block w-full bg-white text-gray-700 border-2 border-dashed border-gray-300 rounded-md py-5 px-4 mb-3 leading-tight focus:outline-none focus:border-black max-sm:mb-2 max-sm:py-3 max-sm:px-2 max-sm:text-sm"
               id="name"
               name="name"
               type="text"
@@ -153,9 +153,9 @@ const Banner = () => {
               placeholder="Your Name*"
             />
           </div>
-          <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0 py-2">
+          <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0 py-2 max-sm:mb-3 max-sm:py-1">
             <input
-              className="appearance-none block w-full bg-white text-gray-700 border-2 border-dashed border-gray-300 rounded-md py-5 px-4 mb-3 leading-tight focus:outline-none focus:border-black"
+              className="appearance-none block w-full bg-white text-gray-700 border-2 border-dashed border-gray-300 rounded-md py-5 px-4 mb-3 leading-tight focus:outline-none focus:border-black max-sm:mb-2 max-sm:py-3 max-sm:px-2 max-sm:text-sm"
               id="email"
               name="email"
               type="text"
@@ -163,9 +163,9 @@ const Banner = () => {
               placeholder="Your Email*"
             />
           </div>
-          <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0 py-2">
+          <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0 py-2 max-sm:mb-3 max-sm:py-1">
             <input
-              className="appearance-none block w-full bg-white text-gray-700 border-2 border-dashed border-gray-300 rounded-md py-5 px-4 mb-3 leading-tight focus:outline-none focus:border-black"
+              className="appearance-none block w-full bg-white text-gray-700 border-2 border-dashed border-gray-300 rounded-md py-5 px-4 mb-3 leading-tight focus:outline-none focus:border-black max-sm:mb-2 max-sm:py-3 max-sm:px-2 max-sm:text-sm"
               id="phone"
               name="phone"
               type="text"
@@ -173,9 +173,9 @@ const Banner = () => {
               placeholder="Your Phone*"
             />
           </div>
-          <div className="w-full px-3 py-2">
+          <div className="w-full px-3 py-2 max-sm:mb-3 max-sm:py-1 max-sm:row-span-4">
             <textarea
-              className="appearance-none block w-full bg-white text-gray-700 border-2 border-dashed border-gray-300 rounded-md py-5 px-4 mb-3 leading-tight focus:outline-none focus:border-black"
+              className="appearance-none block w-full bg-white text-gray-700 border-2 border-dashed border-gray-300 rounded-md py-5 px-4 mb-3 leading-tight focus:outline-none focus:border-black max-sm:mb-2 max-sm:py-3 max-sm:px-2 max-sm:text-sm"
               rows="8"
               id="requirements"
               name="requirements"
@@ -185,7 +185,7 @@ const Banner = () => {
 
 <div className="w-full text-center">
       <button 
-        className="bg-white hover:bg-primary text-black font-bold text-xl py-4 px-16 border-[3px] border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary shadow-lg duration-500" 
+        className="bg-white hover:bg-primary text-black font-bold text-xl max-sm:text-lg max-sm:px-8 max-sm:py-2 py-4 px-16 border-[3px] border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary shadow-lg duration-500" 
         type="submit"
       >
         Send Message

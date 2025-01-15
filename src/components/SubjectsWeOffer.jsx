@@ -61,22 +61,21 @@ const SubjectsWeOffer = () => {
   ];
 
   return (
-    <div className="mt-32 mb-10">
-      <div className="flex justify-center items-center mb-10">
-        <h1 className="text-5xl text-center text-black font-bold bg-primary px-4 py-2 rounded-lg shadow-lg inline-block">
+    <div className="mt-32 mb-10 max-sm:mt-24">
+      <div className="flex justify-center items-center mb-10 max-sm:mb-6">
+        <h1 className="text-5xl max-sm:text-3xl max-sm:px-2 max-sm:py-1 text-center text-black font-bold bg-primary px-4 py-2 rounded-lg shadow-lg inline-block">
           Subjects We Offer
         </h1>
       </div>
 
  
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 max-w-6xl mx-auto max-sm:max-w-xs max-sm:gpa-3 max-sm:px-2">
         {subjectsInfo.map((subject, index) => (
           <div
             key={index}
-            className="text-center flex flex-col items-center gap-4  p-6 rounded-lg  hover:shadow-2xl transition-shadow duration-300 ease-in-out"
+            className="text-center flex flex-col items-center gap-4 max-sm:gap-2 p-6 max-sm:p-3 rounded-lg  hover:shadow-2xl transition-shadow duration-300 ease-in-out"
           >
-            <div className="relative w-20 h-20">
-            
+            <div className="relative w-20 h-20 max-sm:w-14 max-sm:h-14">
               <div
                 className=" w-full h-full flex items-center justify-center bg-primary"
                 style={{
@@ -89,14 +88,14 @@ const SubjectsWeOffer = () => {
                   backgroundColor: "#fcd51e",
                 }}
               >
-                <span className="text-3xl text-black">{subject.Icon}</span>
+                <span className="text-3xl text-black max-sm:text-2xl ">{subject.Icon}</span>
               </div>
             </div>
 
-            <h4 className="text-lg font-semibold text-gray-900">
+            <h4 className="text-lg font-semibold text-gray-900 max-sm:text-sm">
               {subject.title}
             </h4>
-            <p className="text-sm text-gray-600">{subject.description}</p>
+            <p className="text-sm text-gray-600 max-sm:text-xs">{subject.description}</p>
           </div>
         ))}
       </div>
