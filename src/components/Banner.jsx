@@ -7,19 +7,50 @@ import axios from "axios";
 const Banner = () => {
   
   const HandleSubmit = (e) => {
+    const service_id = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const template_id = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const user_id = process.env.REACT_APP_EMAILJS_USER_ID;
+    const messageContent = `
+    <table border="1" cellspacing="0" cellpadding="8">
+      <tr>
+        <td><b>Name</b></td>
+        <td>${e.target.name.value}</td>
+      </tr>
+      <tr>
+        <td><b>Email</b></td>
+        <td>${e.target.email.value}</td>
+      </tr>
+      <tr>
+        <td><b>Phone</b></td>
+        <td>${e.target.phone.value}</td>
+      </tr>
+      <tr>
+        <td><b>Requirements</b></td>
+        <td>${e.target.requirements.value}</td>
+      </tr>
+    </table>
+    `;
     e.preventDefault();
     const formdata = new FormData();
     formdata.append("name", e.target.name.value);
     formdata.append("email", e.target.email.value);
     formdata.append("phone", e.target.phone.value);
     formdata.append("requirements", e.target.requirements.value);
-    axios.post("http://localhost:3001/send-email", formdata)
+    const data={
+      service_id: service_id,
+      template_id: template_id,
+      user_id: user_id,
+      template_params: {
+        message: messageContent,
+        to_email: `${e.target.email.value}`,
+        from_name: `Precise Assignments`,
+    }
+  }
+    axios.post("https://api.emailjs.com/api/v1.0/email/send", data)
     .then((res) => {
       console.log(res);
       if(res.data.status === 200){
-        alert(res.data.message);
-      }
-      else{
+        alert("Thank you for contacting us, We will be back to you shortly.");
       }
     })
     .catch((err) => {

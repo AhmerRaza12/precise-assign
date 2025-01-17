@@ -9,24 +9,70 @@ import axios from "axios";
 const Thesis = () => {
   const HandleSubmit = (e) => {
     e.preventDefault();
+    const emailjs_userid = process.env.REACT_APP_EMAILJS_USER_ID;
+    const emailjs_templateid = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const emailjs_serviceid = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const messageContent= `
+    <table border="1" cellspacing="0" cellpadding="8">
+      <tr>
+        <td><b>Name</b></td>
+        <td>${e.target.name.value}</td>
+      </tr>
+      <tr>
+        <td><b>Email</b></td>
+        <td>${e.target.email.value}</td>
+      </tr>
+      <tr>
+        <td><b>Phone</b></td>
+        <td>${e.target.phone.value}</td>
+      </tr>
+      <tr>
+        <td><b>Requirements</b></td>
+        <td>${e.target.requirements.value}</td>
+      </tr>
+    </table>
+    `;
+    const data ={
+      service_id: emailjs_serviceid,
+      template_id: emailjs_templateid,
+      user_id: emailjs_userid,
+      template_params:{
+        message: messageContent,
+        to_email: `${e.target.email.value}`,
+        from_name: `Precise Assignments`,
+      }
+    }
     const formdata = new FormData();
     formdata.append("name", e.target.name.value);
     formdata.append("email", e.target.email.value);
     formdata.append("phone", e.target.phone.value);
     formdata.append("requirements", e.target.requirements.value);
-    axios.post("http://localhost:3001/send-email", formdata)
-    .then((res) => {
-      console.log(res);
-      if(res.data.status === 200){
-        alert(res.data.message);
-      }
-      else{
-      }
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-  };
+  //   axios.post("http://localhost:3001/send-email", formdata)
+  //   .then((res) => {
+  //     console.log(res);
+  //     if(res.data.status === 200){
+  //       alert(res.data.message);
+  //     }
+  //     else{
+  //     }
+  //   })
+  //   .catch((err) => {
+  //     console.log(err);
+  //   });
+  // };
+  axios.post("https://api.emailjs.com/api/v1.0/email/send", data)
+  .then((res) => {
+    console.log(res);
+    if(res.data.status === 200){
+      alert("Thank you for contacting us. We will reach back");
+    }
+    else{
+    }
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+};
   return (
     <>
       <section className="bg-black bg-banner-pattern bg-cover bg-center dark:bg-blue-900 py-12 sm:py-20 relative main-title-section-wrapper">

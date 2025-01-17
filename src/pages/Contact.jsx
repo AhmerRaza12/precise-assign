@@ -44,13 +44,12 @@ const Contact = () => {
       template_params: {
         message: messageContent,
         to_email: `${e.target.email.value}`,
-        from_name: `help@preciseassignments.co.uk`,
+        from_name: `Precise Assignments`,
     }
     }
     formdata.append("email", e.target.email.value);
     formdata.append("phone", e.target.phone.value);
     formdata.append("requirements", e.target.requirements.value);
-    // axios.post("http://localhost:3001/send-email", formdata)
     // .then((res) => {
     //   console.log(res);
     //   if(res.data.status === 200){
