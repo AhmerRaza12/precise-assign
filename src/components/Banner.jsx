@@ -44,13 +44,15 @@ const Banner = () => {
         message: messageContent,
         to_email: `${e.target.email.value}`,
         from_name: `Precise Assignments`,
+        to_name: `${e.target.name.value}`
     }
   }
     axios.post("https://api.emailjs.com/api/v1.0/email/send", data)
     .then((res) => {
       console.log(res);
-      if(res.data.status === 200){
+      if(res.status === 200){
         alert("Thank you for contacting us, We will be back to you shortly.");
+        e.target.reset();
       }
     })
     .catch((err) => {

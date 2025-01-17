@@ -45,6 +45,7 @@ const Contact = () => {
         message: messageContent,
         to_email: `${e.target.email.value}`,
         from_name: `Precise Assignments`,
+        to_name: `${e.target.name.value}`
     }
     }
     formdata.append("email", e.target.email.value);
@@ -64,9 +65,10 @@ const Contact = () => {
 
     axios.post("https://api.emailjs.com/api/v1.0/email/send", data)
     .then((res) => {
-      console.log(res);
-      if(res.data.status === 200){
+      console.log(res.status);
+      if(res.status === 200){
         alert("Thank you for contacting us. We will reach back");
+        e.target.reset();
       }
       else{
       }

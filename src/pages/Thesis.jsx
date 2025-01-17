@@ -40,6 +40,7 @@ const Thesis = () => {
         message: messageContent,
         to_email: `${e.target.email.value}`,
         from_name: `Precise Assignments`,
+        to_name: `${e.target.name.value}` 
       }
     }
     const formdata = new FormData();
@@ -47,24 +48,12 @@ const Thesis = () => {
     formdata.append("email", e.target.email.value);
     formdata.append("phone", e.target.phone.value);
     formdata.append("requirements", e.target.requirements.value);
-  //   axios.post("http://localhost:3001/send-email", formdata)
-  //   .then((res) => {
-  //     console.log(res);
-  //     if(res.data.status === 200){
-  //       alert(res.data.message);
-  //     }
-  //     else{
-  //     }
-  //   })
-  //   .catch((err) => {
-  //     console.log(err);
-  //   });
-  // };
   axios.post("https://api.emailjs.com/api/v1.0/email/send", data)
   .then((res) => {
     console.log(res);
-    if(res.data.status === 200){
+    if(res.status === 200){
       alert("Thank you for contacting us. We will reach back");
+      e.target.reset();
     }
     else{
     }
