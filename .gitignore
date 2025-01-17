@@ -5,13 +5,15 @@
 /.pnp
 .pnp.js
 backend/node_modules
+# .env file for Node.js Server (backend)
 backend/.env
 # testing
 /coverage
-
+# .env file for React app (frontend)
+.env
 # production
 /build
-
+/src/.env
 # misc
 .DS_Store
 .env.local
