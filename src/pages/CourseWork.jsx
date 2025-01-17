@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useState,useEffect} from "react";
 import "./CourseWork.css";
 import AboutSection from "../components/AboutSection";
 import Services from "../components/Services";
@@ -7,6 +7,21 @@ import GetInTouch from "../components/GetInTouch";
 import SubjectsWeOffer from "../components/SubjectsWeOffer";
 import Process from "../components/Process";
 const InnerPage = () => {
+  const [userIp, setUserIp] = useState('');
+  useEffect(()=>{
+    fetch('https://api.ipify.org?format=json')
+    .then((res) => res.json())
+    .then((data) => {
+      setUserIp(data.ip);
+    })
+    .catch(() => {
+      setUserIp('Could not fetch IP');
+    });
+  },[]);
+  console.log(userIp);
+  const userUrl = window.location.href;
+  console.log(userUrl);
+
   const HandleSubmit = (e) => {
     const emailjs_userid = process.env.REACT_APP_EMAILJS_USER_ID;
     const emailjs_templateid = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
@@ -31,6 +46,14 @@ const InnerPage = () => {
         <td><b>Requirements</b></td>
         <td>${e.target.requirements.value}</td>
       </tr>
+      <tr>
+        <td><b>IP</b></td>
+        <td>${userIp}</td>
+      </tr>
+      <tr>
+        <td><b>User Entry</b></td>
+        <td>${userUrl}</td>
+      </tr>
     </table>
     `;
     const data ={
@@ -39,9 +62,7 @@ const InnerPage = () => {
       user_id: emailjs_userid,
       template_params:{
         message: messageContent,
-        to_email: `${e.target.email.value}`,
-        from_name: `Precise Assignments`,
-        to_name: `${e.target.name.value}` 
+        from_name: `Precise Assignments`, 
       }
     }
     formdata.append("name", e.target.name.value);

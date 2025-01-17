@@ -1,11 +1,25 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import BgImage from "../assets/new-bg.png";
 import SliderCarousel from "./SliderCarousel";
 import axios from "axios";
 // import ContactImage from "https://img.freepik.com/free-vector/call-center-design_24877-49643.jpg";
 
 const Banner = () => {
-  
+  const [userIp, setUserIp] = useState('');
+
+  useEffect(()=>{
+    fetch('https://api.ipify.org?format=json')
+    .then((res) => res.json())
+    .then((data) => {
+      setUserIp(data.ip);
+    })
+    .catch(() => {
+      setUserIp('Could not fetch IP');
+    });
+  },[])
+  console.log(userIp);
+  const userUrl = window.location.href;
+  console.log(userUrl);
   const HandleSubmit = (e) => {
     const service_id = process.env.REACT_APP_EMAILJS_SERVICE_ID;
     const template_id = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
@@ -28,6 +42,14 @@ const Banner = () => {
         <td><b>Requirements</b></td>
         <td>${e.target.requirements.value}</td>
       </tr>
+      <tr>
+        <td><b>IP</b></td>
+        <td>${userIp}</td>
+      </tr>
+      <tr>
+        <td><b>User Entry</b></td>
+        <td>${userUrl}</td>
+      </tr>
     </table>
     `;
     e.preventDefault();
@@ -42,9 +64,7 @@ const Banner = () => {
       user_id: user_id,
       template_params: {
         message: messageContent,
-        to_email: `${e.target.email.value}`,
         from_name: `Precise Assignments`,
-        to_name: `${e.target.name.value}`
     }
   }
     axios.post("https://api.emailjs.com/api/v1.0/email/send", data)

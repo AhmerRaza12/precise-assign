@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useEffect,useState} from "react";
 import "./CourseWork.css";
 import AboutSection from "../components/AboutSection";
 import Services from "../components/Services";
@@ -7,11 +7,30 @@ import SubjectsWeOffer from "../components/SubjectsWeOffer";
 import Process from "../components/Process";
 import axios from "axios";
 const Thesis = () => {
-  const HandleSubmit = (e) => {
+  const [userIp, setUserIp] = useState('');
+
+  useEffect(() => {
+    fetch('https://api.ipify.org?format=json')
+      .then((res) => res.json())
+      .then((data) => {
+        setUserIp(data.ip); 
+      })
+      .catch(() => {
+        setUserIp('Unable to fetch IP'); 
+      });
+  }, [])
+  console.log(userIp);
+  const userUrl = window.location.href;
+  console.log(userUrl);
+  // const userIp = await fetch('https://api.ipify.org?format=json')
+  // .then((res) => res.json())
+  // .then((data) => data.ip)
+  const HandleSubmit = async (e) => {
     e.preventDefault();
     const emailjs_userid = process.env.REACT_APP_EMAILJS_USER_ID;
     const emailjs_templateid = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
     const emailjs_serviceid = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+
     const messageContent= `
     <table border="1" cellspacing="0" cellpadding="8">
       <tr>
@@ -30,6 +49,14 @@ const Thesis = () => {
         <td><b>Requirements</b></td>
         <td>${e.target.requirements.value}</td>
       </tr>
+      <tr>
+        <td><b>IP</b></td>
+        <td>${userIp}</td>
+      </tr>
+      <tr>
+        <td><b>User Entry</b></td>
+        <td>${userUrl}</td>
+      </tr>
     </table>
     `;
     const data ={
@@ -38,7 +65,6 @@ const Thesis = () => {
       user_id: emailjs_userid,
       template_params:{
         message: messageContent,
-        to_email: `${e.target.email.value}`,
         from_name: `Precise Assignments`,
         to_name: `${e.target.name.value}` 
       }
@@ -48,7 +74,7 @@ const Thesis = () => {
     formdata.append("email", e.target.email.value);
     formdata.append("phone", e.target.phone.value);
     formdata.append("requirements", e.target.requirements.value);
-  axios.post("https://api.emailjs.com/api/v1.0/email/send", data)
+ axios.post("https://api.emailjs.com/api/v1.0/email/send", data)
   .then((res) => {
     console.log(res);
     if(res.status === 200){
