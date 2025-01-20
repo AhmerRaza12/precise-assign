@@ -18,9 +18,9 @@ const Essay = () => {
         setUserIp('Could not fetch IP');
       });
     },[]);
-  const emailjs_userid = process.env.REACT_APP_EMAILJS_USER_ID;
-  const emailjs_templateid = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-  const emailjs_serviceid = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const emailjs_userid = 'B1OYlWtB3Y7TdoSP7';
+    const emailjs_templateid = 'template_j7jq8i9';
+    const emailjs_serviceid = 'service_g675ycm';
   console.log(userIp);
   const userUrl = window.location.href;
   console.log(userUrl);

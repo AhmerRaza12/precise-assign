@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import { Link } from 'react-router-dom';
 import { CiMail } from "react-icons/ci";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -7,10 +7,27 @@ import { SlGlobe } from "react-icons/sl";
 import { HiMapPin } from "react-icons/hi2";
 import axios from "axios";
 const Contact = () => {
-  const emailjs_userid = process.env.REACT_APP_EMAILJS_USER_ID;
-  const emailjs_templateid = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-  const emailjs_serviceid = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const [userIp, setUserIp] = useState('');
+  const emailjs_userid = 'B1OYlWtB3Y7TdoSP7';
+  const emailjs_templateid = 'template_j7jq8i9';
+  const emailjs_serviceid = 'service_g675ycm';
   console.log(emailjs_userid,emailjs_templateid,emailjs_serviceid);
+
+  
+  
+    useEffect(()=>{
+      fetch('https://api.ipify.org?format=json')
+      .then((res) => res.json())
+      .then((data) => {
+        setUserIp(data.ip);
+      })
+      .catch(() => {
+        setUserIp('Could not fetch IP');
+      });
+    },[])
+    console.log(userIp);
+    const userUrl = window.location.href;
+    console.log(userUrl);
 
   const HandleSubmit = (e) => {
     e.preventDefault();
@@ -43,11 +60,9 @@ const Contact = () => {
       user_id: emailjs_userid,
       template_params: {
         message: messageContent,
-        to_email: `${e.target.email.value}`,
         from_name: `Precise Assignments`,
-        to_name: `${e.target.name.value}`
     }
-    }
+  }
     formdata.append("email", e.target.email.value);
     formdata.append("phone", e.target.phone.value);
     formdata.append("requirements", e.target.requirements.value);
